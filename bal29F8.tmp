@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://uq5yx2n8io04"]
+
+[ext_resource type="Script" path="res://ball_launcher.gd" id="1_8nnlc"]
+[ext_resource type="Texture2D" uid="uid://cq30mbers0f1a" path="res://Sprites/skull.png" id="1_yd5mp"]
+
+[node name="Ball Launcher" type="CharacterBody2D"]
+script = ExtResource("1_8nnlc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(109, 318)
+texture = ExtResource("1_yd5mp")

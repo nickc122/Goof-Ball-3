@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dw3mhcv7osk6r"]
+
+[ext_resource type="PackedScene" uid="uid://uq5yx2n8io04" path="res://Scenes/ball_launcher.tscn" id="1_72j6x"]
+[ext_resource type="PackedScene" uid="uid://b5qjy2xxdgj27" path="res://Scenes/ui.tscn" id="3_1gses"]
+[ext_resource type="PackedScene" uid="uid://dw2bbavgsnsy3" path="res://Scenes/target_spawner.tscn" id="3_wgvx2"]
+[ext_resource type="Script" path="res://Scripts/spawn_again.gd" id="4_srqox"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryd4j"]
+size = Vector2(20, 434)
+
+[node name="Level" type="Node2D"]
+
+[node name="Ball Launcher" parent="." instance=ExtResource("1_72j6x")]
+position = Vector2(55, 180)
+
+[node name="TargetSpawner" parent="." instance=ExtResource("3_wgvx2")]
+
+[node name="UI" parent="." instance=ExtResource("3_1gses")]
+
+[node name="SpawnAgain" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("4_srqox")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpawnAgain"]
+position = Vector2(476, 182)
+shape = SubResource("RectangleShape2D_ryd4j")

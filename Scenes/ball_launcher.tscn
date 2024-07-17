@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://uq5yx2n8io04"]
+
+[ext_resource type="Script" path="res://Scripts/ball_launcher.gd" id="1_8nnlc"]
+[ext_resource type="Texture2D" uid="uid://cq30mbers0f1a" path="res://Sprites/skull.png" id="1_yd5mp"]
+
+[node name="Ball Launcher" type="CharacterBody2D"]
+collision_mask = 0
+motion_mode = 1
+script = ExtResource("1_8nnlc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_yd5mp")
+flip_h = true
+
+[node name="BallContainer" type="Node" parent="."]

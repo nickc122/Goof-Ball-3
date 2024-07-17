@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwbwe2w42v8as"]
+
+[ext_resource type="Script" path="res://Scripts/apple.gd" id="1_fbwhy"]
+[ext_resource type="Texture2D" uid="uid://3axtf2augudg" path="res://Sprites/blueberries.png" id="2_6yt4p"]
+
+[node name="Blueberries" type="Area2D"]
+script = ExtResource("1_fbwhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_6yt4p")
