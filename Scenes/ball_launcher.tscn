@@ -14,3 +14,7 @@ texture = ExtResource("1_yd5mp")
 flip_h = true
 
 [node name="BallContainer" type="Node" parent="."]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(9, 27)
+scale = Vector2(1.4, 1.4)

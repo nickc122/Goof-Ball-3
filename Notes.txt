@@ -1,3 +1,2 @@
 Quick To-Do
-	-Set launcher so that it can't go up and down at the same time.
 	-Set launcher so that it can't fire while the ball will appear off-screen.

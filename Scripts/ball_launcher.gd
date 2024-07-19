@@ -8,6 +8,7 @@ var ballInstance = preload("res://Scenes/ball.tscn") #calls the ball here to sav
 @onready var screensize = get_viewport_rect().size
 @onready var ballContainer = $BallContainer #calls this extra node to eventually receive the balls as children
 @onready var spriteHeight = ($Sprite2D.texture.get_height()) #gets the size of the sprite
+@onready var isVisible = $VisibleOnScreenNotifier2D
 
 func _physics_process(delta):
 	velocity = Vector2(0,0) #resets speed to 0 if no button pushed
@@ -16,6 +17,8 @@ func _physics_process(delta):
 		velocity.y = speed #when input pressed, move up
 	if Input.is_action_pressed("move_up"):
 		velocity.y = -speed #when input pressed, move down
+	if Input.is_action_pressed("move_down") and Input.is_action_pressed("move_up"):
+		velocity.y = 0 #can't move when pushing both buttons
 	move_and_slide() #required to actually trigger movement
 
 
@@ -29,7 +32,7 @@ func _process(delta): #happens at a time interval in which phsyics isn't involve
 		shoot() #call shoot function when input pressed on a check
 		
 func shoot():
-	if Global.can_shoot: #checks a variable in the autoloaded Global.gd
+	if Global.can_shoot and isVisible.is_on_screen(): #checks a variable in the autoloaded Global.gd and checks if the VisibleOnScreenNotifier node is visible
 		var launchedBall = ballInstance.instantiate() #creates an instance of the ball from the above variable
 		ballContainer.add_child(launchedBall) #creates the ball as a child
 		launchedBall.global_position = global_position #sets the position relevant to the launcher itself
