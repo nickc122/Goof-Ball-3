@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw3mhcv7osk6r"]
+[gd_scene load_steps=4 format=3 uid="uid://dw3mhcv7osk6r"]
 
 [ext_resource type="PackedScene" uid="uid://uq5yx2n8io04" path="res://Scenes/ball_launcher.tscn" id="1_72j6x"]
 [ext_resource type="PackedScene" uid="uid://b5qjy2xxdgj27" path="res://Scenes/ui.tscn" id="3_1gses"]
 [ext_resource type="PackedScene" uid="uid://dw2bbavgsnsy3" path="res://Scenes/target_spawner.tscn" id="3_wgvx2"]
-[ext_resource type="PackedScene" uid="uid://b2iklns484p4p" path="res://Scenes/bomb.tscn" id="4_872e1"]
 
 [node name="Level" type="Node2D"]
 
@@ -13,6 +12,3 @@ position = Vector2(55, 180)
 [node name="TargetSpawner" parent="." instance=ExtResource("3_wgvx2")]
 
 [node name="UI" parent="." instance=ExtResource("3_1gses")]
-
-[node name="Bomb" parent="." instance=ExtResource("4_872e1")]
-position = Vector2(272, 201)

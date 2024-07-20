@@ -1,2 +1,6 @@
 Quick To-Do
-	-Set launcher so that it can't fire while the ball will appear off-screen.
+	
+	
+Bigger To-Do
+	-create better math for bomb spawn rate
+	-create some sort of game over

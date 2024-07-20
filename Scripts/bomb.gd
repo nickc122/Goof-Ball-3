@@ -16,6 +16,8 @@ func _physics_process(delta): #currently just moving it along and determining wh
 	if global_position.y > screensize.y + destroyMargin or global_position.y < -destroyMargin:
 		queue_free() #destroying when far enough off screen
 
-func hit():
+func hit(): #the ball calls this upon contact
 	queue_free()
+	get_tree().reload_current_scene()
+	Global.score = 0
 
