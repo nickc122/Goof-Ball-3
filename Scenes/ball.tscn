@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3hyf4nng5k1n"]
 
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_unsvs"]
-[ext_resource type="Texture2D" uid="uid://d1iad486f883r" path="res://Sprites/jewel4.png" id="2_q5m5a"]
+[ext_resource type="Texture2D" uid="uid://cl0s3si3l8xh4" path="res://Sprites/Ball.png" id="2_2brhi"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jodxw"]
 radius = 16.0
@@ -12,7 +12,9 @@ collision_mask = 4
 script = ExtResource("1_unsvs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_q5m5a")
+position = Vector2(-1.07288e-06, -1.07288e-06)
+scale = Vector2(0.064, 0.064)
+texture = ExtResource("2_2brhi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jodxw")
