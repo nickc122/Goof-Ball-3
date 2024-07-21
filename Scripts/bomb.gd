@@ -17,7 +17,5 @@ func _physics_process(delta): #currently just moving it along and determining wh
 		queue_free() #destroying when far enough off screen
 
 func hit(): #the ball calls this upon contact
-	queue_free()
-	get_tree().reload_current_scene()
-	Global.score = 0
-
+	queue_free() #destroys the bomb that was hit
+	Global.game_restart() #Temporary
