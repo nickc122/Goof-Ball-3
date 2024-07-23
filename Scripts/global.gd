@@ -15,7 +15,21 @@ func game_restart(): #resets the intial variables, probably code out later
 
 func scoring(points): #a simple scoring function set up so that targets can call...
 	score += points #...using the variable points
-	if score >= 800: #this will eventually be where the math that determines the bomb spawn goes
+	if score >= 500 and score <1000: #this will eventually be where the math that determines the bomb spawn goes
+		bombLower = 8
+		bombUpper = 10
+	if score >= 1000 and score <1500: #this will eventually be where the math that determines the bomb spawn goes
+		bombLower = 7
+		bombUpper = 9
+	if score >= 1500 and score <2000: #this will eventually be where the math that determines the bomb spawn goes
+		bombLower = 5
+		bombUpper = 7
+	if score >= 2000 and score <2500: #this will eventually be where the math that determines the bomb spawn goes
 		bombLower = 4
 		bombUpper = 5
-	
+	if score >= 2500 and score <3000: #this will eventually be where the math that determines the bomb spawn goes
+		bombLower = 3
+		bombUpper = 4
+	if score >= 3000: #this will eventually be where the math that determines the bomb spawn goes
+		bombLower = 2
+		bombUpper = 4
