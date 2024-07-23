@@ -32,7 +32,7 @@ func _process(delta): #happens at a time interval in which phsyics isn't involve
 		shoot() #call shoot function when input pressed on a check
 		
 func shoot():
-	if Global.can_shoot and isVisible.is_on_screen(): #checks a variable in the autoloaded Global.gd and checks if the VisibleOnScreenNotifier node is visible
+	if Global.can_shoot and isVisible.is_on_screen() and Global.bomb_been_hit == false: #checks a variable in the autoloaded Global.gd and checks if the VisibleOnScreenNotifier node is visible and that the game isn't over
 		var launchedBall = ballInstance.instantiate() #creates an instance of the ball from the above variable
 		ballContainer.add_child(launchedBall) #creates the ball as a child
 		launchedBall.global_position = global_position #sets the position relevant to the launcher itself
