@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 150 #sets the speed, regardless of direction
+var speed = randi_range(50,300) #sets the speed, regardless of direction
 var movement = {} #sets an empty variable to be used throughout script to determine final movement based on direction
 @onready var screensize = get_viewport_rect().size #accesses the screensize in case it changes
 var destroyMargin = 100 #easy access to change the distance outside the screen at which destroyed

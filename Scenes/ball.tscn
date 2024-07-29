@@ -1,7 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3hyf4nng5k1n"]
+[gd_scene load_steps=12 format=3 uid="uid://b3hyf4nng5k1n"]
 
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_unsvs"]
-[ext_resource type="Texture2D" uid="uid://cl0s3si3l8xh4" path="res://Sprites/Ball.png" id="2_2brhi"]
+[ext_resource type="Texture2D" uid="uid://brqxow4ahehky" path="res://Sprites/Animated Ball/Ball-1.png" id="2_v4g35"]
+[ext_resource type="Texture2D" uid="uid://c1te07xqetygs" path="res://Sprites/Animated Ball/Ball-2.png" id="3_t0sqf"]
+[ext_resource type="Texture2D" uid="uid://c67404vum30wo" path="res://Sprites/Animated Ball/Ball-3.png" id="4_paf00"]
+[ext_resource type="Texture2D" uid="uid://cygk7kddye2l4" path="res://Sprites/Animated Ball/Ball-4.png" id="5_n2fso"]
+[ext_resource type="Texture2D" uid="uid://ba6qjad6q6m2j" path="res://Sprites/Animated Ball/Ball-5.png" id="6_m2p78"]
+[ext_resource type="Texture2D" uid="uid://b70j8sehr7ona" path="res://Sprites/Animated Ball/Ball-6.png" id="7_xbh11"]
+[ext_resource type="Texture2D" uid="uid://jex54rwkwyux" path="res://Sprites/Animated Ball/Ball-7.png" id="8_xoklw"]
+[ext_resource type="Texture2D" uid="uid://22oe4hcpftfe" path="res://Sprites/Animated Ball/Ball-8.png" id="9_2w2vj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gicmm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_v4g35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t0sqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_paf00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n2fso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_m2p78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xbh11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xoklw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2w2vj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jodxw"]
 radius = 16.0
@@ -11,10 +50,11 @@ collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_unsvs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-1.07288e-06, -1.07288e-06)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.064, 0.064)
-texture = ExtResource("2_2brhi")
+sprite_frames = SubResource("SpriteFrames_gicmm")
+autoplay = "default"
+frame_progress = 0.258969
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_jodxw")
